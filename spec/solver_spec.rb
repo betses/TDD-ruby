@@ -5,27 +5,25 @@ describe Solver do
     before(:each) do
       @value = 5
       @zero = 0
+      @funk = Solver.new
     end
 
     it 'check for factorial of 0' do
-      @funk = Solver.new
       expect(@funk.factorial(@zero)).to eql 1
     end
     it 'check for factorial of -5' do
-      @funk = Solver.new
       @value = -5
       expect(@funk.factorial(@value)).not_to eql 1
     end
     it 'check for factorial of 5' do
-      @funk = Solver.new
-      expect(@funk.factorial(@value)).not_to eql 120
+      expect(@funk.factorial(@value)).not_to eql 20
     end
   end
 
   describe 'Test for reverse string method' do
     it 'Check the reverse string of Hello' do
       @solver = Solver.new
-      expect(@solver.reverse('Hello')).to eql 'olleh'
+      expect(@solver.reversal('Hello')).to eql 'olleh'
     end
   end
 
